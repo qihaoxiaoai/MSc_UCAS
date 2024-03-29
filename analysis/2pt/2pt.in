@@ -1,0 +1,25 @@
+#input topo and trj
+IN_LMPDATA                    ./6-6-6.data
+IN_LMPTRJ                     2pt.veloc
+
+#output prefix
+ANALYSIS_OUT                  cnt
+
+#input lammps MD setting
+MD_TSTEP                      0.0005
+TRAJ_DUMPFREQ                 2
+MD_AVGTEMPERATURE             300
+
+#anal frame info setting
+ANALYSIS_FRAME_INITIAL        1
+ANALYSIS_FRAME_FINAL          20000    #0 is the final frame
+ANALYSIS_FRAME_STEP           1
+ANALYSIS_VAC_CORLENGTH        0.5
+ANALYSIS_VAC_MEMORYMB         1024000
+#ANALYSIS_VAC_LINEAR_MOL       0
+#ANALYSIS_VAC_ROTN_SYMMETRY    2
+#ANALYSIS_VAC_FIXED_DF         0
+ANALYSIS_MOLECULE_FLAG        1
+
+ANALYSIS_VAC_2PT              3
+ANALYSIS_SHOW2PT              1
